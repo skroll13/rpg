@@ -163,7 +163,7 @@ def fight(enemy):
         if raw_input == "1":
             hero.doublePointsAttack(enemy)
             enemy.attack(hero)
-            if enemy.alive() <= 0 and hero.alive():
+            if enemy.health <=0 and hero.health > 0:
                 # add bounty to hero
                 hero.collectBounty(enemy.bounty)
         elif raw_input == "2":
@@ -174,7 +174,7 @@ def fight(enemy):
         else:
             print("Invalid input {}. Please choose again.".format(raw_input))
             return
-fight(shadow)
+fight(goblin)
 
 # def store():
 #     while #not sure what goes here but it needs to stay open for shopping
